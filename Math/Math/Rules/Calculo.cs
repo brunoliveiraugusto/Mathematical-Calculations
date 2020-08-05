@@ -39,7 +39,7 @@ namespace Math.Rules
 
             if(numero > 0)
             {
-                for(long numeroDivisor = 0; numeroDivisor <= numero; numeroDivisor++)
+                for(long numeroDivisor = 1; numeroDivisor <= numero; numeroDivisor++)
                 {
                     if(numero % numeroDivisor == 0)
                     {
@@ -49,7 +49,7 @@ namespace Math.Rules
             }
             else if(numero < 0)
             {
-                for(long numeroDivisor = 0; numeroDivisor >= numero; numeroDivisor--)
+                for(long numeroDivisor = -1; numeroDivisor >= numero; numeroDivisor--)
                 {
                     if(numero % numeroDivisor == 0)
                     {
