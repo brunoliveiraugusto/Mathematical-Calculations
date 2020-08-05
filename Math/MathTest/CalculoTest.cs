@@ -44,5 +44,16 @@ namespace MathTest
             Assert.IsNotNull(resp);
             Assert.IsTrue(resp);
         }
+
+        [TestMethod]
+        public void TestarMetodoIndicaDivisorPrimoComValorNaoPrimo()
+        {
+            var calculo = new Calculo();
+
+            var resp = calculo.IndicaDivisorPrimo(10);
+
+            Assert.IsNotNull(resp);
+            Assert.IsFalse(resp);
+        }
     }
 }
