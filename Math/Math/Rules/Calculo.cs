@@ -7,22 +7,22 @@ namespace Math.Rules
 {
     public class Calculo
     {
-        public List<double> Divisores { get; set; }
-        public List<double> DivisoresPrimos { get; set; }
+        public List<long> Divisores { get; set; }
+        public List<long> DivisoresPrimos { get; set; }
 
         public Calculo()
         {
-            this.Divisores = new List<double>();
-            this.DivisoresPrimos = new List<double>();
+            this.Divisores = new List<long>();
+            this.DivisoresPrimos = new List<long>();
         }
 
-        public Calculo CalcularDivisoresEDivisoresPrimos(double numero)
+        public Calculo CalcularDivisoresEDivisoresPrimos(long numero)
         {
             var calculo = new Calculo();
 
             calculo.Divisores = this.CalcularDivisores(numero);
 
-            foreach(double numeroDivisor in calculo.Divisores)
+            foreach(long numeroDivisor in calculo.Divisores)
             {
                 if(this.IndicaDivisorPrimo(numeroDivisor))
                 {
@@ -33,13 +33,13 @@ namespace Math.Rules
             return calculo;
         }
 
-        public List<double> CalcularDivisores(double numero)
+        public List<long> CalcularDivisores(long numero)
         {
-            var divisores = new List<double>();
+            var divisores = new List<long>();
 
             if(numero > 0)
             {
-                for(double numeroDivisor = 0; numeroDivisor <= numero; numeroDivisor++)
+                for(long numeroDivisor = 0; numeroDivisor <= numero; numeroDivisor++)
                 {
                     if(numero % numeroDivisor == 0)
                     {
@@ -49,7 +49,7 @@ namespace Math.Rules
             }
             else if(numero < 0)
             {
-                for(double numeroDivisor = 0; numeroDivisor >= numero; numeroDivisor--)
+                for(long numeroDivisor = 0; numeroDivisor >= numero; numeroDivisor--)
                 {
                     if(numero % numeroDivisor == 0)
                     {
@@ -61,7 +61,7 @@ namespace Math.Rules
             return divisores;
         }
 
-        public bool IndicaDivisorPrimo(double numero)
+        public bool IndicaDivisorPrimo(long numero)
         {
             if(numero > -2 && numero < 2)
             {
@@ -70,7 +70,7 @@ namespace Math.Rules
 
             if(numero > 1)
             {
-                for(double numeroDivisor = 2; numeroDivisor < numero; numeroDivisor++)
+                for(long numeroDivisor = 2; numeroDivisor < numero; numeroDivisor++)
                 {
                     if(numero % numeroDivisor == 0)
                     {
@@ -80,7 +80,7 @@ namespace Math.Rules
             }
             else if(numero < -1)
             {
-                for(double numeroDivisor = -2; numeroDivisor > numero; numeroDivisor--)
+                for(long numeroDivisor = -2; numeroDivisor > numero; numeroDivisor--)
                 {
                     if(numero % numeroDivisor == 0)
                     {

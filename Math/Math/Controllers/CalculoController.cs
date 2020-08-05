@@ -8,7 +8,7 @@ namespace Math.Controllers
     {
         [Route("Calculo/CalcularDivisoresEDivisoresPrimos")]
         [HttpGet]
-        public Calculo CalcularDivisoresEDivisoresPrimos(double numero)
+        public Calculo CalcularDivisoresEDivisoresPrimos(long numero)
         {
             return new Calculo().CalcularDivisoresEDivisoresPrimos(numero);
         }
