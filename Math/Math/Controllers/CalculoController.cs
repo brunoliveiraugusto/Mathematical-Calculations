@@ -6,11 +6,11 @@ namespace Math.Controllers
 {
     public class CalculoController : Controller
     {
-        [Route("Calculo/CalcularNumerosDivisoresENumerosPrimos")]
+        [Route("Calculo/CalcularDivisoresEDivisoresPrimos")]
         [HttpGet]
-        public Calculo CalcularNumerosDivisoresENumerosPrimos(double numero)
+        public Calculo CalcularDivisoresEDivisoresPrimos(double numero)
         {
-            return new Calculo().CalcularNumerosDivisoresENumerosPrimos(numero);
+            return new Calculo().CalcularDivisoresEDivisoresPrimos(numero);
         }
     }
 }

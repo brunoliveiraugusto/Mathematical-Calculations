@@ -7,35 +7,35 @@ namespace Math.Rules
 {
     public class Calculo
     {
-        public List<double> NumerosDivisores { get; set; }
-        public List<double> NumerosPrimos { get; set; }
+        public List<double> Divisores { get; set; }
+        public List<double> DivisoresPrimos { get; set; }
 
         public Calculo()
         {
-            this.NumerosDivisores = new List<double>();
-            this.NumerosPrimos = new List<double>();
+            this.Divisores = new List<double>();
+            this.DivisoresPrimos = new List<double>();
         }
 
-        public Calculo CalcularNumerosDivisoresENumerosPrimos(double numero)
+        public Calculo CalcularDivisoresEDivisoresPrimos(double numero)
         {
             var calculo = new Calculo();
 
-            calculo.NumerosDivisores = this.CalcularNumerosDivisores(numero);
+            calculo.Divisores = this.CalcularDivisores(numero);
 
-            foreach (double numeroDivisor in calculo.NumerosDivisores)
+            foreach (double numeroDivisor in calculo.Divisores)
             {
-                if(this.IndicaNumeroPrimo(numeroDivisor))
+                if(this.IndicaDivisorPrimo(numeroDivisor))
                 {
-                    calculo.NumerosPrimos.Add(numeroDivisor);
+                    calculo.DivisoresPrimos.Add(numeroDivisor);
                 }
             }
 
             return calculo;
         }
 
-        public List<double> CalcularNumerosDivisores(double numero)
+        public List<double> CalcularDivisores(double numero)
         {
-            var numerosDivisores = new List<double>();
+            var divisores = new List<double>();
 
             if(numero > 0)
             {
@@ -43,7 +43,7 @@ namespace Math.Rules
                 {
                     if (numero % numeroDivisor == 0)
                     {
-                        numerosDivisores.Add(numeroDivisor);
+                        divisores.Add(numeroDivisor);
                     }
                 }
             }
@@ -53,15 +53,15 @@ namespace Math.Rules
                 {
                     if (numero % numeroDivisor == 0)
                     {
-                        numerosDivisores.Add(numeroDivisor);
+                        divisores.Add(numeroDivisor);
                     }
                 }
             }
 
-            return numerosDivisores;
+            return divisores;
         }
 
-        public bool IndicaNumeroPrimo(double numero)
+        public bool IndicaDivisorPrimo(double numero)
         {
             if(numero > -2 && numero < 2)
             {
