@@ -21,5 +21,28 @@ namespace MathTest
             Assert.AreEqual(2, resp.DivisoresPrimos.FirstOrDefault());
             Assert.AreEqual(5, resp.DivisoresPrimos.LastOrDefault());
         }
+
+        [TestMethod]
+        public void TestarMetodoCalcularDivisores()
+        {
+            var calculo = new Calculo();
+
+            var resp = calculo.CalcularDivisores(20);
+
+            Assert.IsNotNull(resp);
+            Assert.AreEqual(1, resp.FirstOrDefault());
+            Assert.AreEqual(20, resp.LastOrDefault());
+        }
+
+        [TestMethod]
+        public void TestarMetodoIndicaDivisorPrimo()
+        {
+            var calculo = new Calculo();
+
+            var resp = calculo.IndicaDivisorPrimo(5);
+
+            Assert.IsNotNull(resp);
+            Assert.IsTrue(resp);
+        }
     }
 }
