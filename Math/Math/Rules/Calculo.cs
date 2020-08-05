@@ -22,7 +22,7 @@ namespace Math.Rules
 
             calculo.Divisores = this.CalcularDivisores(numero);
 
-            foreach (double numeroDivisor in calculo.Divisores)
+            foreach(double numeroDivisor in calculo.Divisores)
             {
                 if(this.IndicaDivisorPrimo(numeroDivisor))
                 {
@@ -39,9 +39,9 @@ namespace Math.Rules
 
             if(numero > 0)
             {
-                for (double numeroDivisor = 0; numeroDivisor <= numero; numeroDivisor++)
+                for(double numeroDivisor = 0; numeroDivisor <= numero; numeroDivisor++)
                 {
-                    if (numero % numeroDivisor == 0)
+                    if(numero % numeroDivisor == 0)
                     {
                         divisores.Add(numeroDivisor);
                     }
@@ -49,9 +49,9 @@ namespace Math.Rules
             }
             else if(numero < 0)
             {
-                for (double numeroDivisor = 0; numeroDivisor >= numero; numeroDivisor--)
+                for(double numeroDivisor = 0; numeroDivisor >= numero; numeroDivisor--)
                 {
-                    if (numero % numeroDivisor == 0)
+                    if(numero % numeroDivisor == 0)
                     {
                         divisores.Add(numeroDivisor);
                     }
@@ -70,9 +70,9 @@ namespace Math.Rules
 
             if(numero > 1)
             {
-                for (double numeroDivisor = 2; numeroDivisor < numero; numeroDivisor++)
+                for(double numeroDivisor = 2; numeroDivisor < numero; numeroDivisor++)
                 {
-                    if (numero % numeroDivisor == 0)
+                    if(numero % numeroDivisor == 0)
                     {
                         return false;
                     }
@@ -80,9 +80,9 @@ namespace Math.Rules
             }
             else if(numero < -1)
             {
-                for (double numeroDivisor = -2; numeroDivisor > numero; numeroDivisor--)
+                for(double numeroDivisor = -2; numeroDivisor > numero; numeroDivisor--)
                 {
-                    if (numero % numeroDivisor == 0)
+                    if(numero % numeroDivisor == 0)
                     {
                         return false;
                     }
